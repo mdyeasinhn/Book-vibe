@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className="container mx-auto h-[500px] flex bg-[#1313130D] rounded-xl mt-5">
+        <div className="container mx-auto h-[500px] grid md:grid-cols-2 sm:grid-cols-1 bg-[#1313130D] rounded-xl mt-5">
             <div>
                 <h2 className="text-6xl pt-32 pl-28 font-bold">Books to freshen up <br /> your bookshelf</h2>
                 <div className="mt-14">
