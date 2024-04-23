@@ -9,6 +9,7 @@ import Root from './Componentes/Root/Root';
 import ErrorPage from './Componentes/ErrorPage/ErrorPage';
 import Home from './Componentes/Home/Home';
 import ListedBookds from './Componentes/ListedBooks/ListedBookds';
+import BookDetails from './Componentes/BookDetails/BookDetails';
 
 const router = createBrowserRouter([
   {
@@ -24,9 +25,15 @@ const router = createBrowserRouter([
         path: "/books",
         element: <ListedBookds></ListedBookds>
       },
+      
       {
         path: "/page",
         element: <ListedBookds></ListedBookds>
+      },
+      {
+        path: "/book/:bookId",
+        element: <BookDetails></BookDetails>,
+        loader: () => fetch("/books.json")
       }
     ]
   },

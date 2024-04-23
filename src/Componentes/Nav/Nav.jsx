@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
     const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/books">Listed Books</NavLink></li>
-        <li><NavLink to="/page">Pages to Read</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "text-green-500 font-bold" : "font-bold"} to="/">Home</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "text-green-500 font-bold" : "font-bold"} to="/books">Listed Books</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "text-green-500 font-bold" : "font-bold"} to="/page">Pages to Read</NavLink></li>
 
     </>
     return (
