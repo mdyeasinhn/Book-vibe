@@ -6,9 +6,7 @@ const Root = () => {
         <div className="container mx-auto">
             <Nav></Nav>
             <Outlet></Outlet>
-            <p className="text-2xl font-bold underline">
-                Hello world!
-            </p>
+           
         </div>
     );
 };
