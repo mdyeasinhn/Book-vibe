@@ -40,7 +40,9 @@ const ListedBookds = () => {
             {
                 readBook.map(book => <div key={book.bookId}>
                     <div className="card card-side bg-base-100 shadow-xl my-5   ">
+                        <div className="w-[230px] bg-[#1313130D]">
                         <figure><img className="w-[129px] h-[127px]" src={book.image} alt="Movie" /></figure>
+                        </div>
                         <div className="card-body">
                             <h2 className="card-title">{book.bookName}</h2>
                             <p>Click the button to watch on Jetflix app.</p>
