@@ -1,4 +1,3 @@
-import React from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -6,32 +5,32 @@ const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 const data = [
   {
     name: 'The Great Gatsby',
-    uv: 4000,
-    pv: 2400,
+    uv: 192,
+    pv: 192,
     amt: 2400,
   },
   {
     name: 'To kill a mocking bird',
-    uv: 3000,
-    pv: 1398,
+    uv: 281,
+    pv: 281,
     amt: 2210,
   },
   {
     name: '1984',
-    uv: 2000,
-    pv: 9800,
+    uv: 328,
+    pv: 328,
     amt: 2290,
   },
   {
     name: 'The Alchemist',
-    uv: 2780,
-    pv: 3908,
+    uv: 177,
+    pv: 177,
     amt: 2000,
   },
   {
     name: 'Pride and prejudicet',
-    uv: 1890,
-    pv: 4800,
+    uv: 279,
+    pv: 279,
     amt: 2181,
   }
  
@@ -55,7 +54,7 @@ const PageToRead = () => {
   return (
     <BarChart
       width={1200}
-      height={750}
+      height={700}
       data={data}
       margin={{
         top: 20,
@@ -66,7 +65,7 @@ const PageToRead = () => {
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
-      <YAxis />
+      <YAxis dataKey="uv" />
       <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 20]} />

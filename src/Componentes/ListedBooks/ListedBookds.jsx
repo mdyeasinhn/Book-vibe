@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredBookApplication } from "../Utility/LocalStoreages";
-import ReadBooks from "../ReadBooks/ReadBooks";
 
 import { IoIosContacts } from "react-icons/io";
-import { MdOutlineRestorePage } from "react-icons/md";
 
 
 const ListedBookds = () => {
