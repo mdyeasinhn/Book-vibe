@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveBookApplication } from "../Utility/LocalStoreages";
@@ -58,7 +58,8 @@ const BookDetails = () => {
 
                     </div>
                     <div className="flex mt-4 gap-4 ">
-                        <button onClick={handleReadList} className="btn ">Read</button>
+                    <button onClick={handleReadList} className="btn ">Read</button>
+                        {/* <Link to={`/books/${bookId}`}><button onClick={handleReadList} className="btn ">Read</button></Link> */}
                         <ToastContainer />
                         <button onClick={handleWishList} className="btn bg-[#50B1C9]">Wishlist</button>
                     </div>
