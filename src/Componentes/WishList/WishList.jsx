@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import { getStoredBookApplication } from "../Utility/LocalStoreages";
 import { IoIosContacts } from "react-icons/io";
+import { useLoaderData } from "react-router-dom";
 
 
-const ReadBooks = () => {
+const WishList = () => {
     const books = useLoaderData();
-    const [readBook, setReadBook] = useState([]);
+
+    const [wishListBook, setWishListBook] = useState([]);
     console.log(books)
     useEffect(() => {
         const storedBookIds = getStoredBookApplication();
         if (books.length > 0) {
             const bookRead = books.filter(book => storedBookIds.includes(book.bookId));
-            setReadBook(bookRead)
+            setWishListBook(bookRead)
 
        
             console.log(bookRead, storedBookIds, books)
@@ -21,7 +22,7 @@ const ReadBooks = () => {
     return (
        <div>
         {
-        readBook.map(book => <div key={book.bookId}>
+    wishListBook.map(book => <div key={book.bookId}>
              <div className="card card-side bg-base-100  m-5   border-2">
         <div className="w-[230px] bg-[#1313130D] rounded-lg p-10 m-8">
             <figure><img className="w-[129px] h-[127px]" src={book.image} alt="Movie" /></figure>
@@ -64,6 +65,7 @@ const ReadBooks = () => {
        }
        </div>
     );
+
 };
 
-export default ReadBooks;
+export default WishList;
