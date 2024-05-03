@@ -19,7 +19,7 @@ const ListedBookds = () => {
                 </div>
             </div>
 
-            <div role="tablist" className="tabs tabs-lifted mt-8">
+            <div role="tablist" className="tabs tabs-lifted mt-8 justify-start">
                 <Link to='' onClick={() => setTabIndex(0)} role="tab"
                     className={`${tabIndex === 0 ? 'tab tab-active' : 'tab'}`}> Read Books</Link>
   
